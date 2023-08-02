@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: blue;
+    font-family: 'Lato', sans-serif;
+}
+
+p {
+    border: 5px solid yellow;
+    margin: 20px;
+    padding: 20px;
+    background-color: darkblue;
+}
+
+.page-header {
+    text-align: center;
+    color: yellow;
+}
