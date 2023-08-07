@@ -1,3 +1,4 @@
+
 let pokemonList = [
     {
         name: "Bulbasaur",
@@ -16,10 +17,12 @@ let pokemonList = [
     }
 ];
     
-for (let i = 0; i < pokemonList.length; i++) {
-    if (pokemonList[i].height > 0.6) {
-        document.write(`<p>${pokemonList[i].name} height: (${pokemonList[i].height}) - Wow, that's big!</p>`);
+function listIterator(item) {
+    if (item.height > 0.6) {
+        document.write(`<p>${item.name} height: (${item.height}) - Wow, that's big!</p>`);
     } else {
-        document.write(`<p>${pokemonList[i].name} height: (${pokemonList[i].height})</p>`);
+        document.write(`<p>${item.name} height: (${item.height})</p>`);
     }
 }
+
+pokemonList.forEach(listIterator);
