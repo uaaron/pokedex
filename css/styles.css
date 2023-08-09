@@ -19,3 +19,15 @@ p {
     text-align: center;
     color: yellow;
 }
+
+.buttons {
+    border: 5px solid yellow;
+    margin: 2px;
+    padding: 20px;
+    background-color: darkblue;
+    color: yellow;
+}
+
+.pokemon-list {
+    list-style: none;
+}
