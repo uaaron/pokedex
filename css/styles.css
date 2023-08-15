@@ -20,7 +20,7 @@ ul {
 
 .pokemon-list {
     list-style: none;
-    width: 100%;
+    width: 99%;
 }
 
 p {
@@ -38,6 +38,11 @@ p {
     color: yellow;
     width: 100%;
     text-align: left;
+}
+
+button:hover {
+    cursor: pointer;
+    opacity: 0.8;
 }
 
 @media (min-width: 992px) {
