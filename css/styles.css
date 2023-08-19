@@ -45,6 +45,41 @@ button:hover {
     opacity: 0.8;
 }
 
+#modal-container {
+    display: none;
+}
+
+#modal-container.is-visible {
+    display: inline-block;
+    position: fixed;
+    padding: 20px;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    overflow: auto;
+    display: grid;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal {
+    display: inline-block;
+    margin: auto;
+    width: 100%;
+    background-color: aqua;
+    border: 10px solid yellow;
+    max-width: 900px;
+}
+
+.modal-close {
+    float: right;
+    text-decoration: underline;
+    background: none;
+    border: none;
+}
+
 @media (min-width: 992px) {
     .page-header {
         font-size: 2.5em;
