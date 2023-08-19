@@ -2,37 +2,8 @@ let pokemonRepository = (function() {
     let pokemonList = [];
     let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
-    function add(pokemon) {
-        if (typeof pokemon === 'object' && pokemon !== null) {
-            pokemonList.push(pokemon);
-        } else {
-            console.error('Invalid input')
-        }
-    }
-
-    function addListItem(pokemon) {
-        let pokemonList = document.querySelector('ul');
-        let listItem = document.createElement('li');
-        let button = document.createElement('button');
-        button.innerText = pokemon.name;
-        button.classList.add('buttons');
-        listItem.appendChild(button);
-        pokemonList.appendChild(listItem);
-        button.addEventListener('click', function () {
-            showDetails(pokemon);
-        });
-    }
-
-    function showDetails(pokemon) {
-        loadDetails(pokemon).then(function (){
-            console.log(pokemon);
-        })
-    }
-
-    function getAll() {
-        return pokemonList;
-    }
-
+    // populate pokemonList array with pokemon objects containing name of pokemon and URL link to more info regarding specific pokemon.
+    // use add() function to perform validation before pushing pokemon object to pokemonList
     function loadList() {
         return fetch(apiUrl).then(function (response) {
             return response.json();
@@ -49,6 +20,33 @@ let pokemonRepository = (function() {
         })
     }
 
+    function add(pokemon) {
+        if (typeof pokemon === 'object' && pokemon !== null) {
+            pokemonList.push(pokemon);
+        } else {
+            console.error('Invalid input')
+        }
+    }
+
+    function getAll() {
+        return pokemonList;
+    }
+
+    // will add the pokemon object to each individual list item and add the name of pokemon as the text of <li> and add to pokemonList <ul>
+    function addListItem(pokemon) {
+        let pokemonList = document.querySelector('ul');
+        let listItem = document.createElement('li');
+        let button = document.createElement('button');
+        button.innerText = pokemon.name;
+        button.classList.add('buttons');
+        listItem.appendChild(button);
+        pokemonList.appendChild(listItem);
+        button.addEventListener('click', function () {
+            showDetails(pokemon);
+        });
+    }
+
+    // fetches details from each pokemon's individual URL and loads them when showDetails is called
     function loadDetails(item) {
         let url = item.detailsUrl;
         return fetch(url).then(function (response) {
@@ -61,6 +59,14 @@ let pokemonRepository = (function() {
             console.error(e);
         })
     }
+
+    // listener event that is executed when any of the list items are clicked
+    function showDetails(pokemon) {
+        loadDetails(pokemon).then(function (){
+            console.log(pokemon);
+        })
+    }
+
 
     return { 
         add: add,
