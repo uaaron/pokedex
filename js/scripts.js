@@ -60,12 +60,14 @@ let pokemonRepository = (function () {
         })
     }
 
+    // after selected details have loaded the modal is revealed upon triggering event tied to list items
     function showDetails(pokemon) {
         loadDetails(pokemon).then(() => {
             pokemonModal(pokemon);
         })
     }
 
+    //creates the modal, adds details to modal, makes it visible and adds event listeners
     function pokemonModal(pokemon) {
         let modalContainer = document.querySelector('#modal-container');
         modalContainer.innerHTML = '';
@@ -95,8 +97,6 @@ let pokemonRepository = (function () {
 
         modalContainer.classList.add('is-visible');
         setUpEvents(modalContainer);
-
-
     }
 
     function hideModal() {
