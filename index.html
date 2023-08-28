@@ -13,15 +13,15 @@
 
 <body>
 
-    <nav class="navbar navbar-light bg-warning fixed-top mynav">
-        <a class="navbar-brand" href="#"><img src="img/pokemon-logo.webp" width="70" height="50"></a>
+    <nav class="navbar navbar-light bg-warning fixed-top mynav" role="navigation">
+        <a class="navbar-brand" href="#"><img src="img/pokemon-logo.webp" alt="pokemon logo" width="70" height="50"></a>
     </nav>
 
     <!--POKEMON LIST-->
-    <ul class="pokemon-list list-group"></ul>
+    <ul class="pokemon-list list-group" role="list"></ul>
 
     <!--MODAL-->
-    <div id="modal-container" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModal" aria-hidden="true">
+    <div id="modal-container" class="modal fade" tabindex="-1" role="dialog" aria-label="modal container" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -30,7 +30,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body" aria-label="Detailed Pokemon information will appear here">
 
                 </div>
             </div>
