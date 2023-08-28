@@ -21,6 +21,14 @@ body {
     margin-top: 80px;
 }
 
+.modal-content {
+    background-color: rgb(73, 73, 184);
+}
+
+.modal-header {
+    color: yellow;
+}
+
 li {
     width: 68%;
 }
