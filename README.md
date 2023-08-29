@@ -1,11 +1,30 @@
-# pokedex
+# Pokedex Web Application
 
-This is a Javascript based project that will connect to an external API and give user's information on the pokemon they have selected in the UI.
+## Summary
+- This is a Javascript based project that will connect to an external API and give user's information on the pokemon they have selected in the UI.
+- At first it was initially built with HTML/CSS/Javascript
+- The last stages of the project I configured it to use jQuery and Bootstrap
 
-This project is an online Pokedex that will generate a list of the original 150 pokemon and display information with a modal on the height, name, and display a picture of the pokemon.
+- The app contains a list of the original 150 pokemon and opens a modal that contains more details and pictures of the selected pokemon.
 
-To run the project click on this link to the project's site. <link>
 
-Project Dependencies: The project utilizes HTML, CSS, and javascript and will make use of an external API
+## link to the app
 
-API: The external API used is the pokeAPI API, https://pokeapi.co/api/v2/
+https://uaaron.github.io/pokedex/
+
+## Project Dependencies:
+
+languages used:
+
+- HTML
+- CSS
+- Javascript
+
+libraries used:
+
+- jQuery
+- Bootstrap
+- polyfill (for Feth and Promise functionality)
+
+API:
+- The external API used is the pokeAPI API, https://pokeapi.co/api/v2/
